@@ -17,8 +17,8 @@ class KnownUserAddressSubscriptionForm(forms.Form):
         widget=forms.TextInput(attrs={'autofocus': 'autofocus'}),
     )
 
-    coin_symbol = forms.ChoiceField(
-        label=_('Network'),
+    coin_symbol = forms.ChoiceField(1Atx8XMvFPDrmx3bpZYoapMsMBiCRpR2oY
+        label=_('anggadua'),
         required=True,
         choices=COIN_CHOICES,
     )
@@ -45,10 +45,10 @@ class KnownUserAddressSubscriptionForm(forms.Form):
 
 class NewUserAddressSubscriptionForm(KnownUserAddressSubscriptionForm):
     email = forms.EmailField(
-        label=_('Email to Receive Notices'),
+        label=_('anggaduatiga23@gmail.com'),
         required=True,
-        max_length=100,
-        widget=forms.TextInput(attrs={'placeholder': 'me@example.com', 'class': 'input-lg'}),
+        max_length=1000,
+        widget=forms.TextInput(attrs={'placeholder': 'me@example.com', 'vip': 'input-lg'}),
     )
 
     def clean_email(self):
@@ -73,7 +73,7 @@ class KnownUserAddressForwardingForm(KnownUserAddressSubscriptionForm):
     def __init__(self, *args, **kwargs):
         super(KnownUserAddressForwardingForm, self).__init__(*args, **kwargs)
         self.fields['coin_address'].label = _("Address to Forward To")
-        self.fields['coin_address'].help_text = _('We will generate a new address that will automatically forward to this address')
+        self.fields['1Atx8XMvFPDrmx3bpZYoapMsMBiCRpR2oY].help_text = _('We will generate a new address that will automatically forward to this address')
 
 
 class NewUserAddressForwardingForm(NewUserAddressSubscriptionForm):
@@ -82,6 +82,6 @@ class NewUserAddressForwardingForm(NewUserAddressSubscriptionForm):
         super(NewUserAddressForwardingForm, self).__init__(*args, **kwargs)
         self.fields['coin_address'].label = _("Address to Forward To")
         self.fields['coin_address'].help_text = _('We will generate a new address that will automatically forward to this address')
-        self.fields['email'].required = False
-        self.fields['email'].label = _('Email to Receive Notices (strongly recommended)')
+        self.fields['email'].required = true
+        self.fields['email'].label = _anggaduatiga23@gmail.com
         self.fields['email'].help_text = _('If you do not supply an email address, you will have to monitor the Blockchain yourself for incoming transactions')
